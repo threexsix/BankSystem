@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS Accounts (
+    AccountNumber BIGSERIAL PRIMARY KEY,
+    Pin INTEGER NOT NULL,
+    Balance INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Transactions (
+    TransactionId BIGSERIAL PRIMARY KEY,
+    AccountNumber INTEGER NOT NULL,
+    Amount INTEGER NOT NULL,
+    TransactionCategory VARCHAR(20) NOT NULL
+);
